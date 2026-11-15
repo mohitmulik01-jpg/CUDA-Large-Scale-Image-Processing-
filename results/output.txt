@@ -1,0 +1,23 @@
+====================================
+CUDA LARGE-SCALE IMAGE PROCESSING
+====================================
+GPU: Tesla T4
+Images found: 200
+Processed: 20/200
+Processed: 40/200
+Processed: 60/200
+Processed: 80/200
+Processed: 100/200
+Processed: 120/200
+Processed: 140/200
+Processed: 160/200
+Processed: 180/200
+Processed: 200/200
+
+========== RESULTS ==========
+Images processed: 200
+GPU kernel time: 5.3191 ms
+Total execution time: 346.862 ms
+Average GPU kernel time per image: 0.0265955 ms
+Output directory: data/output
+Status: SUCCESS
