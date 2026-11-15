@@ -105,10 +105,10 @@ Platform: Google Colab
 Actual recorded execution:
 
 - Images processed: 200
-- GPU kernel time: 5.3191 ms
-- Total execution time: 346.862 ms
-- Average GPU kernel time per image: 0.0265955 ms
-- Overall throughput: approximately 576.6 images/second
+- GPU kernel time: 5.00541 ms
+- Total execution time: 301.859 ms
+- Average GPU kernel time per image: 0.025027 ms
+- Overall throughput: approximately 662.56 images/second
 
 These measurements are from one recorded execution.
 Results may vary depending on GPU availability and

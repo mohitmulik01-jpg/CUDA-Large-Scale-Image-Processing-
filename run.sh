@@ -10,16 +10,20 @@ echo "CUDA LARGE-SCALE IMAGE PROCESSING"
 echo "======================================"
 
 echo ""
-echo "Checking NVIDIA GPU..."
+echo "Step 1: Checking GPU..."
 nvidia-smi
 
 echo ""
-echo "Compiling CUDA project..."
+echo "Step 2: Generating 200 input images..."
+python3 generate_dataset.py
+
+echo ""
+echo "Step 3: Compiling CUDA application..."
 make clean
 make build
 
 echo ""
-echo "Executing image processing..."
+echo "Step 4: Processing all images..."
 
 mkdir -p results data/output
 
@@ -29,5 +33,18 @@ mkdir -p results data/output
     2>&1 | tee results/output.txt
 
 echo ""
-echo "Execution completed successfully!"
-echo "Check results/output.txt for execution logs."
+echo "Step 5: Verifying output..."
+
+INPUT_COUNT=$(find data/input -name '*.ppm' | wc -l)
+OUTPUT_COUNT=$(find data/output -name '*.ppm' | wc -l)
+
+echo "Input images: $INPUT_COUNT"
+echo "Output images: $OUTPUT_COUNT"
+
+if [ "$INPUT_COUNT" -ne 200 ] || [ "$OUTPUT_COUNT" -ne 200 ]; then
+    echo "ERROR: Image count verification failed!"
+    exit 1
+fi
+
+echo ""
+echo "SUCCESS: All 200 images processed!"

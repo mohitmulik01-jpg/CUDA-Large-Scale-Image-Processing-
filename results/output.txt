@@ -16,8 +16,8 @@ Processed: 200/200
 
 ========== RESULTS ==========
 Images processed: 200
-GPU kernel time: 5.3191 ms
-Total execution time: 346.862 ms
-Average GPU kernel time per image: 0.0265955 ms
+GPU kernel time: 5.00541 ms
+Total execution time: 301.859 ms
+Average GPU kernel time per image: 0.025027 ms
 Output directory: data/output
 Status: SUCCESS
